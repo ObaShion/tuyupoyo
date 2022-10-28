@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)https://marugotoaomori-puyoringo.com/ -->
+<html crosspilot="">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: content: https://ssl.gstatic.com;
+style-src * &#39;unsafe-inline&#39;; script-src * &#39;unsafe-inline&#39; &#39;unsafe-eval&#39;">
+  <meta content="青森りんごを品種別に積んで消す、青森りんごパズルゲーム！" name="description">
+  <meta property="og:title" content="ぷよりんご">
+  <meta property="og:description" content="青森りんごを品種別に積んで消す、青森りんごパズルゲーム！">
+  <meta property="og:type" content="game">
+  <meta property="og:site_name" content="まるごと青森">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:image" content="https://marugotoaomori-puyoringo.com/img/ogp.jpg">
+  <meta property="og:url" content="https://marugotoaomori-puyoringo.com">
+  <meta name="twitter:card" content="summary_large_image">
+  <script async="" src="./ぷよりんご_files/analytics.js"></script>
+  <script type="text/javascript" src="./ぷよりんご_files/c7fa7451-6f95-4815-ac32-b8cc2537837a"
+    data-awssuidacr="yMEiolEJzEKq6QhAku4hLiE8YU6weHZ4"></script>
+  <script type="text/javascript" async="" src="./ぷよりんご_files/taas"></script>
+  <script src="./ぷよりんご_files/js" async=""></script>
+</head>
+
+<body style="margin:0;">
+  <pagemap>
+    <dataobject type="thumbnail">
+      <attribute name="src" value="https://marugotoaomori-puyoringo.com/img/thumbnail.jpg">
+        <attribute name="width" value="200">
+          <attribute name="height" value="200">
+          </attribute>
+        </attribute>
+      </attribute>
+    </dataobject>
+  </pagemap>
+  <title>ぷよりんご</title>
+  <script src="./ぷよりんご_files/config.js"></script>
+  <script src="./ぷよりんご_files/stage.js"></script>
+  <script src="./ぷよりんご_files/score.js"></script>
+  <script src="./ぷよりんご_files/puyoimage.js"></script>
+  <script src="./ぷよりんご_files/player.js"></script>
+  <script src="./ぷよりんご_files/game.js"></script>
+  <link rel="stylesheet" href="./ぷよりんご_files/style.css">
+  <script>
+    window.addEventListener('load', (e) => {
+      document.getElementById('loader').style.display = "none";
+    })
+  </script>
+
+
+  <div id="contents" style="margin: auto; bottom: 0px; width: 496.417px; height: 851px;" class="horizontal-center">
+    <img src="./ぷよりんご_files/re_lefttree_rightringopuyo.png" style="top: 5%;left: 1%;height: 78%;width: auto;">
+    <img src="./ぷよりんご_files/bottomapple_puyo.png" style="top: 85%;left: 2%;height: auto;width: 96%;">
+    <img src="./ぷよりんご_files/re_right_tree_ringopuyo.png" style="top: 30%;left: 67%;height: 53%;width: auto;">
+    <div id="stage" style=" overflow: hidden; width: 60%; height:80%; top:5%; left:12%;">
+      <div id="cover" style="display:none; width: 100%; height: 100%; z-index: 10;position: relative;">
+        <div id="easySelector"
+          style="display:none;top:15%;height: 12%;width:45%;background-image: url(img/flame_hringopuyo.png);background-size: contain;"
+          class="horizontal-center">
+          <img src="./ぷよりんご_files/easy.png" style="height: 30%;" class="center">
+        </div>
+        <div id="normalSelector"
+          style="display:none;top:40%;height: 12%;width:45%;background-image: url(img/flame_hringopuyo.png);background-size: contain;"
+          class="horizontal-center">
+          <img src="./ぷよりんご_files/normal.png" style="height: 30%;" class="center">
+        </div>
+        <div id="hardSelector"
+          style="display:none;top:65%;height: 12%;width:45%;background-image: url(img/flame_hringopuyo.png);background-size: contain;"
+          class="horizontal-center">
+          <img src="./ぷよりんご_files/hard.png" style="height: 30%;" class="center">
+        </div>
+      </div>
+      <div id="coverColor" style="display: block; width: 100%; height: 100%; z-index: 10; position: relative;">
+        <img src="./ぷよりんご_files/dochirano.png" style="top:18%;height: 2.6%;" class="horizontal-center">
+        <img src="./ぷよりんご_files/fuji.png" id="redSelector" style="top:30%;height: 22%;" class="horizontal-center">
+        <img src="./ぷよりんご_files/gurin.png" id="blueSelector" style="top:63%;height: 22%;" class="horizontal-center">
+      </div>
+    </div>
+    <img style="height:2%; top:7%;" src="./ぷよりんご_files/tsuginoringo.png" class="rightcolumn-center">
+    <div id="nextPuyo"
+      style=" height: 16%;  width: 16%; top:10%;background-image: url(img/nextapple_puyo.png);display: flex;"
+      class="rightcolumn-center"></div>
+
+    <img style="top: 41%;height: 1.8%" class="rightcolumn-center" src="./ぷよりんご_files/muzukashisa.png">
+    <img id="difficulty" style="top: 45%;height: 2%" class="rightcolumn-center"
+      src="https://marugotoaomori-puyoringo.com/">
+
+    <img src="./ぷよりんご_files/partitionapple_puyo.png" style="top: 51%; width: 15%;" class="rightcolumn-center">
+    <img style="top: 54%;height: 1.8%;" class="rightcolumn-center" src="./ぷよりんご_files/tottaryo.png">
+    <div id="scoreNum" style="width: 30%;top: 56%;height: 7%;font-size: 4vh" class="rightcolumn-center text-center"><img
+        src="./ぷよりんご_files/0.png" id="num_0" class="num"></div>
+    <img id="scoreUnit" style="top: 63%;height: 3%;" class="rightcolumn-center" src="./ぷよりんご_files/kg.png">
+
+    <img src="./ぷよりんご_files/partitionapple_puyo.png" style="top: 69%; width: 15%;" class="rightcolumn-center">
+    <img src="./ぷよりんご_files/renzoku.png" style="top: 72%;height: 1.8%;" class="rightcolumn-center">
+    <div id="maxRensaNum" style="top: 75%;height: 7%;" class="rightcolumn-center text-center"><img
+        src="./ぷよりんご_files/0.png" id="num_0" class="num"></div>
+
+    <div id="rotate" style="height: 15%;left: 85%;width: 15%;z-index: 1;" class="bottomcolumn-center"></div>
+    <img src="./ぷよりんご_files/rotationringopuyo.png" style="height:8%;left:85%;" class="bottomcolumn-center-reverse">
+    <div id="rotateRight" style="display: none;height: 15%;left: 90%;width: 15%;z-index: 1;"
+      class="bottomcolumn-center"></div>
+    <img src="./ぷよりんご_files/rotationringopuyo.png" style="display: none;height:8%;left:90%;"
+      class="bottomcolumn-center">
+    <div id="left" style="height: 15%;left: 10%;width: 15%;z-index: 1;" class="bottomcolumn-center"></div>
+    <img src="./ぷよりんご_files/leftringopuyo.png" style="height:8%;left:10%;" class="bottomcolumn-center">
+    <div id="down" style="height: 15%;left: 30%;width: 10%;z-index: 1;" class="bottomcolumn-center"></div>
+    <img src="./ぷよりんご_files/belowringopuyo.png" style="height:4.5%;left:30%;" class="bottomcolumn-center">
+    <div id="right" style="height: 15%;left: 50%;width: 15%;z-index: 1;" class="bottomcolumn-center"></div>
+    <img src="./ぷよりんご_files/rightringopuyo.png" style="height:8%;left:50%;" class="bottomcolumn-center">
+
+    <div id="gameover" style="display: none;width: 65%; height: 17%;background-color: black;" class="center rotate">
+      <img src="./ぷよりんご_files/gameover_whiteringopuyo.png" style="top: 25%; left:50%; width: 60%;"
+        class="translate-center">
+      <img id="restart" src="./ぷよりんご_files/tsudukeru_whiteringopuyo.png" style="top: 75%; left:30%; width: 35%;"
+        class="translate-center">
+      <a id="tweet" href="https://marugotoaomori-puyoringo.com/" rel="nofollow" target="_blank">
+        <img src="./ぷよりんご_files/tsubuyaku_whiteringopuyo.png" style="top: 75%; left:70%; width: 35%;"
+          class="translate-center">
+      </a>
+    </div>
+
+    <div style="display:none">
+      <img src="./ぷよりんご_files/puyo_1.png" id="puyo_1">
+      <img src="./ぷよりんご_files/puyo_2.png" id="puyo_2">
+      <img src="./ぷよりんご_files/puyo_3.png" id="puyo_3">
+      <img src="./ぷよりんご_files/puyo_4.png" id="puyo_4">
+      <img src="./ぷよりんご_files/puyo_5.png" id="puyo_5">
+      <img src="./ぷよりんご_files/puyo_6.png" id="puyo_6">
+      <img src="./ぷよりんご_files/puyo_7.png" id="puyo_7">
+      <img src="./ぷよりんご_files/puyo_8.png" id="puyo_8">
+      <img src="./ぷよりんご_files/puyo_b_1.png" id="puyo_b_1">
+      <img src="./ぷよりんご_files/puyo_b_2.png" id="puyo_b_2">
+      <img src="./ぷよりんご_files/puyo_b_3.png" id="puyo_b_3">
+      <img src="./ぷよりんご_files/puyo_b_4.png" id="puyo_b_4">
+      <img src="./ぷよりんご_files/puyo_b_5.png" id="puyo_b_5">
+      <img src="./ぷよりんご_files/puyo_b_6.png" id="puyo_b_6">
+      <img src="./ぷよりんご_files/puyo_b_7.png" id="puyo_b_7">
+      <img src="./ぷよりんご_files/puyo_b_8.png" id="puyo_b_8">
+      <img src="./ぷよりんご_files/0.png" id="num_0" class="num">
+      <img src="./ぷよりんご_files/1.png" id="num_1" class="num" style="margin-right: 5px;">
+      <img src="./ぷよりんご_files/2.png" id="num_2" class="num">
+      <img src="./ぷよりんご_files/3.png" id="num_3" class="num">
+      <img src="./ぷよりんご_files/4.png" id="num_4" class="num">
+      <img src="./ぷよりんご_files/5.png" id="num_5" class="num">
+      <img src="./ぷよりんご_files/6.png" id="num_6" class="num">
+      <img src="./ぷよりんご_files/7.png" id="num_7" class="num">
+      <img src="./ぷよりんご_files/8.png" id="num_8" class="num">
+      <img src="./ぷよりんご_files/9.png" id="num_9" class="num">
+      <img src="./ぷよりんご_files/dot.png" id="dot" class="num">
+    </div>
+  </div>
+  <div id="loader" class="loader" style="display: none;">Loading...</div>
+
+
+  <script>(() => {
+        window.addoncropExtensions = window.addoncropExtensions || [];
+        window.addoncropExtensions.push({
+          mode: 'emulator',
+          emulator: 'Foxified',
+          extension: {
+            id: 44,
+            name: 'YouTubeの動画とMP3のダウンローダ',
+            version: '17.2.7',
+            date: 'May 5, 2022',
+          },
+          flixmateConnected: false,
+        });
+      })();</script><iframe src="./ぷよりんご_files/saved_resource.html" style="display: none;"></iframe>
+</body>
+
+</html>
