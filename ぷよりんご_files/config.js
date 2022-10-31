@@ -5,7 +5,7 @@ class Config {
     Config.puyoImgWidth = document.getElementById("stage").offsetWidth / Config.stageCols;
   }
 }
-Config.hashtags = "aomoringo";
+Config.hashtags = "tuyukubo";
 Config.stageRows = 14;
 Config.stageCols = 6;
 Config.freeFallingSpeed = 5000000000000; // 自由落下のスピード
